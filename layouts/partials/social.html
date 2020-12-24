@@ -3,7 +3,7 @@
     {{ range $social :=  .Site.Params.social }}
       <a href="{{ $social.url }}" name="{{ $social.name }}"
         ><em class="{{ $social.icon }}"></em
-      ></a>
+      ></a>&nbsp;
     {{ end }}
 {{ end }}
 {{ if .Site.Params.social_static }}
