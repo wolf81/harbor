@@ -8,10 +8,6 @@
   {{ $.Scratch.Set "title" .Title }}
 {{ end }}
 
-{{ range .Site.Params.css }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-{{ end }}
-
 {{ $title := $.Scratch.Get "title" }}
 
 {{ if $title }}
