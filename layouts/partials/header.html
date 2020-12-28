@@ -8,12 +8,13 @@
   {{ $.Scratch.Set "title" .Title }}
 {{ end }}
 
-{{ $title := $.Scratch.Get "title" }}
-
-{{ if $title }}
 {{ range .Site.Params.css }}
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{ end }}
+
+{{ $title := $.Scratch.Get "title" }}
+
+{{ if $title }}
   <header>
     {{ partial "nav.html" . }}
     <div class="intro-header">
